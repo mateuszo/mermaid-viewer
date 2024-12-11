@@ -1,0 +1,9 @@
+graph LR
+    Browser[Browser]
+    Server[Server]
+    API[API]
+
+    %% Connections
+    Browser <-->|SSR| Server
+    Server <-->|server-side| API
+    Browser <-->|client-side| API

@@ -1,0 +1,10 @@
+flowchart LR
+    Browser["Browser"] <-- SSR --> Server["Server"]
+    Server <-- "server-side" --> Middleware["Middleware"]
+    Browser <-- "client-side" --> Middleware
+    Middleware --> API["API"]
+    Browser <-- "client-side" --> API
+
+
+
+
