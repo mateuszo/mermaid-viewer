@@ -1,10 +1,11 @@
 flowchart LR
     Browser["Browser"] <-- SSR --> Server["Server"]
     Server <-- "server-side" --> Middleware["Middleware"]
+    Server <-- "fa:fa-ban" --> API
     Browser <-- "client-side" --> Middleware
     Middleware --> API["API"]
     Browser <-- "client-side" --> API
 
-
+linkStyle 2 stroke:red
 
 
