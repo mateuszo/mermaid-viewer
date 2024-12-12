@@ -1,9 +1,9 @@
 graph LR
-    Browser[Browser]
-    Server[Server]
-    API[API]
+    subgraph s1["Storefront"]
+         Browser["Browser"]
+         Server["Server"]
+    end
 
-    %% Connections
     Browser <-->|SSR| Server
     Server <-->|server-side| API
     Browser <-->|client-side| API
