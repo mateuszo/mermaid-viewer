@@ -7,7 +7,13 @@ const Mermaid = ({ chart }: { chart: string }) => {
   const [svg, setSvg] = useState<string>();
 
   useEffect(() => {
-    mermaid.initialize({ startOnLoad: false, look: 'handDrawn' });
+    mermaid.initialize({ startOnLoad: false, look: 'handDrawn',  'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#00E16D',
+      'secondaryColor': '#9BCCB4',
+      'tertiaryColor': '#EBFAF2',
+      'edgeLabelBackground': '#fff'
+    }});
     mermaid.render('mermaidChart', chart).then((result) => setSvg(result.svg));
   }, [chart]);
 
