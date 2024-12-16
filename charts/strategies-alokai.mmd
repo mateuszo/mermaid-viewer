@@ -1,9 +1,9 @@
 flowchart LR
  subgraph s1["Storefront"]
-    Browser["Browser"] <-- SSR --> Server["Server"]
+    Browser("Browser") <-- SSR --> Server("Server")
   end
-    Server <-- "server-side" --> Middleware["Middleware"]
-    Server <-- "fa:fa-ban" --> API["API"]
+    Server <-- "server-side" --> Middleware("Middleware")
+    Server <-- "fa:fa-ban" --> API("API")
     Browser <-- "client-side" --> Middleware 
     Middleware --> API
     Browser <-- "client-side" --> API

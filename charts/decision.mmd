@@ -1,0 +1,5 @@
+graph TD
+    A{Can data be fetched server side?} -->|Yes| B[Use middleware]
+    A -->|No| C{Can data be fetched by the middleware?}
+    C -->|No| B
+    C -->|Yes| D[Connect directly]
