@@ -13,6 +13,7 @@ const Mermaid = ({ chart }: { chart: string }) => {
       'secondaryColor': '#9BCCB4',
       'tertiaryColor': '#EBFAF2',
       'edgeLabelBackground': '#fff',
+      'lineColor': '#7C868D'
     }});
     mermaid.render('mermaidChart', chart).then((result) => setSvg(result.svg));
   }, [chart]);
